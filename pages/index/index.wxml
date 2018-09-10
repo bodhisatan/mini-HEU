@@ -1,0 +1,69 @@
+<i-grid>
+    <i-row>
+        <i-grid-item bindtap = "openDoor">
+            <i-grid-icon>
+                <i-icon size="24" type="addressbook" />
+            </i-grid-icon>
+            <i-grid-label>内网入口</i-grid-label>
+        </i-grid-item>
+        <i-grid-item bindtap = "openScoreCalc">
+            <i-grid-icon>
+                <i-icon size="24" type="dynamic" />
+            </i-grid-icon>
+            <i-grid-label>学分统计</i-grid-label>
+        </i-grid-item>
+        <i-grid-item bindtap = "openTable">
+            <i-grid-icon>
+                <i-icon size="24" type="barrage" />                
+            </i-grid-icon>
+            <i-grid-label>课表查询</i-grid-label>
+        </i-grid-item>
+    </i-row>
+    <i-row>
+        <i-grid-item bindtap = "openExperiment">
+            <i-grid-icon>
+                <i-icon size="24" type="clock" />
+            </i-grid-icon>
+            <i-grid-label>实验备忘</i-grid-label>
+        </i-grid-item>
+        <i-grid-item bindtap = "openBookSearch">
+            <i-grid-icon>
+                <i-icon size="24" type="computer" />
+            </i-grid-icon>
+            <i-grid-label>馆藏检索</i-grid-label>
+        </i-grid-item>
+        <i-grid-item bindtap = "openExpress">
+            <i-grid-icon>
+                <i-icon size="24" type="coordinates" />
+            </i-grid-icon>
+            <i-grid-label>快递跟踪</i-grid-label>
+        </i-grid-item>
+    </i-row>
+    <i-row>
+        <i-grid-item bindtap = "openFeedback">
+            <i-grid-icon>
+                <i-icon size="24" type="mail" />
+            </i-grid-icon>
+            <i-grid-label>bug反馈</i-grid-label>
+        </i-grid-item>
+        <i-grid-item bindtap = "openSupport">
+            <i-grid-icon>
+                <i-icon size="24" type="praise" />
+            </i-grid-icon>
+            <i-grid-label>给我投食</i-grid-label>
+        </i-grid-item>
+        <i-grid-item bindtap = "openAbout">
+            <i-grid-icon>
+                <i-icon size="24" type="collection" />
+            </i-grid-icon>
+            <i-grid-label>关于</i-grid-label>
+        </i-grid-item>
+    </i-row>
+</i-grid>
+
+<view class = "switch_">
+  <i-switch value="{{switch1}}" size="large"bind:change="onChange"slot="footer">
+    <view slot="open">天气</view>
+    <view slot="close">关闭</view>
+  </i-switch>
+</view>

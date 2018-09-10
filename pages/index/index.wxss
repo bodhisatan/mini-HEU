@@ -1,0 +1,7 @@
+/* pages/index/index.wxss */
+.switch_ {
+  position: absolute;
+  bottom: 60px;
+  right: 20px;
+  z-index: 2;
+}

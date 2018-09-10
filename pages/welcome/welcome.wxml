@@ -1,0 +1,11 @@
+<!--pages/welcome/welcome.wxml-->
+
+<view class = "container">
+    <image class = "avatar" src = "/images/welcome.png"></image>
+    <text class = "motto">welcome to mini-HEU</text>
+    <view class = "journey-container">
+      <navigator url="../index/index">
+        <text class = "journey">进入内网助手</text>
+      </navigator>
+    </view>
+</view>
