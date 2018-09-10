@@ -1,6 +1,4 @@
 <!--pages/express/express.wxml-->
-<import src="/pages/tabbar/tabbar.wxml"/>
-<template is="tabbar" data="{{tabbar}}"/>
 
 <view class="box">
   <view class="search-box">
@@ -31,3 +29,6 @@
     </view>
   </view>
 </view>
+
+<import src="/pages/tabbar/tabbar.wxml"/>
+<template is="tabbar" data="{{tabbar}}"/>

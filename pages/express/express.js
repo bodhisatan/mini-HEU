@@ -19,7 +19,8 @@ Page({
     wx.showLoading({
       title: '加载中',
     });
-
+    
+    app.editTabBar();
   },
 
   onShow: function () {

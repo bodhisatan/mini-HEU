@@ -1,66 +1,70 @@
-// pages/personal/personal.js
+var app = getApp()
+var Util = require('../../utils/util.js');
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    motto: '欢迎使用mini-HEU！',
+    userInfo: {},
+    expressList: [],
+
+    tabbar: {}
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  onLoad: function () {
+    app.editTabBar();
+    wx.showLoading({
+      title: '加载中',
+    })
+
+    var that = this
+    app.getUserInfo(function (userInfo) {
+      that.setData({
+        userInfo: userInfo
+      })
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
-  
+    setTimeout(function () {
+      wx.hideLoading()
+    }, 100);
+    this.setData({
+      expressList: []
+    })
+    this.showMyExpress();
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+  showMyExpress: function () {
+    var self = this;
+    try {
+      let list = wx.getStorageSync('historySearchList')
+      if (list.length > 0) {
+        for (let i = 0; i < list.length; i++) {
+          wx.getStorage({
+            key: list[i].order,
+            success: function (res) {
+              let resobj = res.data;
+              resobj.order = list[i].order;
+              resobj.name = list[i].name;
+              resobj.code = list[i].code;
+              resobj.logosrc = Util.mapLogo(list[i].code);
+              let l = self.data.expressList.slice(0);
+              l.push(resobj);
+              self.setData({
+                expressList: l
+              })
+            }
+          })
+        }
+      }
+    } catch (e) {
+      console.warn(e)
+    }
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+  showDetail: function (event) {
+    wx.navigateTo({
+      url: '../detail/detail?LogisticCode=' + event.currentTarget.dataset.order + '&ShipperCode=' + event.currentTarget.dataset.code + '&ShipperName=' + event.currentTarget.dataset.name
+    })
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
 })

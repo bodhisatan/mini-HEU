@@ -48,16 +48,16 @@ App({
       list: [
         {
           pagePath: "/pages/express/express",
-          text: "项目",
+          text: "快递查询",
           iconPath: "/images/express.png",
           selectedIconPath: "/images/express_select.png",
           selected: true
         },
         {
-          pagePath: "/pages/ad/address",
-          text: "通讯录",
-          iconPath: "/images/ts.png",
-          selectedIconPath: "/images/ts1.png",
+          pagePath: "/pages/personal/personal",
+          text: "我的快递",
+          iconPath: "/images/manager.png",
+          selectedIconPath: "/images/manager_select.png",
           selected: false
         }
       ],

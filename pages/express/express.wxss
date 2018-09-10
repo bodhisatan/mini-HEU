@@ -1,8 +1,6 @@
 /* pages/express/express.wxss */
 /**index.wxss**/
 
-@import '/pages/tabbar/tabbar.wxss';
-
 .box {
   height: 100%;
   padding: 200rpx 0;
@@ -135,3 +133,5 @@
   width: 20px;
   height: 20px;
 }
+
+@import "/pages/tabbar/tabbar.wxss"
