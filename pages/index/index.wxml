@@ -61,8 +61,14 @@
     </i-row>
 </i-grid>
 
+<view wx:if="{{weather_switch}}" class = "weather_message">
+<text class = "weather_text">{{weatherData}}</text>
+<image class = "weather_pic1" mode="widthFix" src="{{picUrl1}}" style="width: 80rpx; height: 60rpx;"></image>
+<image class = "weather_pic2" mode="widthFix" src="{{picUrl2}}" style="width: 80rpx; height: 60rpx;"></image>
+</view>
+
 <view class = "switch_">
-  <i-switch value="{{switch1}}" size="large"bind:change="onChange"slot="footer">
+  <i-switch value="{{weather_switch}}" size="large"bind:change="onChange"slot="footer">
     <view slot="open">天气</view>
     <view slot="close">关闭</view>
   </i-switch>

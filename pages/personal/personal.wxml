@@ -1,10 +1,10 @@
 <!--pages/personal/personal.wxml-->
 <view class="header">
-  <view class="userinfo">
-    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
-  </view>
+    <open-data class = "open-data-icon" type = "userAvatarUrl">
+    </open-data>
   <view class="content">
-    <view class="nickname">{{userInfo.nickName}}</view>
+    <open-data class = "nickname" type = "userNickName">
+    </open-data>
     <view class="welcome">{{motto}}</view>
   </view>
 </view>

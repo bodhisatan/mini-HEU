@@ -10,7 +10,7 @@ view{
 
 .header{
     display: flex;
-    background-color: #EF6262;
+    background-color: #c5d0fe;
     justify-content: center;
     align-items: center;
     padding: 5%;

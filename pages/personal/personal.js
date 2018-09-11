@@ -3,7 +3,7 @@ var Util = require('../../utils/util.js');
 Page({
   data: {
     motto: '欢迎使用mini-HEU！',
-    userInfo: {},
+
     expressList: [],
 
     tabbar: {}
@@ -13,13 +13,6 @@ Page({
     app.editTabBar();
     wx.showLoading({
       title: '加载中',
-    })
-
-    var that = this
-    app.getUserInfo(function (userInfo) {
-      that.setData({
-        userInfo: userInfo
-      })
     })
   },
 
