@@ -228,7 +228,7 @@ Page({
       let dataSign = Base64.encode(MD5(requestData + appKey));
 
       wx.request({
-        url: 'http://api.kdniao.cc/Ebusiness/EbusinessOrderHandle.aspx',
+        url: 'https://api.kdniao.com/Ebusiness/EbusinessOrderHandle.aspx',
         data: {
           RequestData: requestData,
           EBusinessID: eBusinessID,
