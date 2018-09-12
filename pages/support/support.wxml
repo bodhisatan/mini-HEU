@@ -1,2 +1,4 @@
 <!--pages/support/support.wxml-->
-<text>pages/support/support.wxml</text>
+<view class='reward_msg'>
+<image class = 'pic' style = "width: 550rpx; height: 550rpx;" mode = "aspectFit" src = "{{src}}"></image>
+</view>

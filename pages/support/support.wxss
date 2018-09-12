@@ -1,1 +1,11 @@
 /* pages/support/support.wxss */
+
+.reward_msg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pic {
+   margin-top: 200rpx;
+}
