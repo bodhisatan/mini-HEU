@@ -1,66 +1,52 @@
 // pages/door/door.js
+var inputs = {}
+
 Page({
-
-  /**
-   * 页面的初始数据
-   */
   data: {
-  
+    inputs: {}
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
+  inputChange: function (e) {
+    inputs[e.currentTarget.id] = e.detail.value
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
+  formSubmit: function () {
+    var page = this
+    if (inputs['username'] == null || inputs['username'] == '') {
+      page.showModal('请输入学号')
+      return
+    }
+    if (inputs['password'] == null || inputs['password'] == '') {
+      page.showModal('请输入密码')
+      return
+    }
+    wx.setStorageSync('username', inputs['username'])
+    wx.setStorageSync('password', inputs['password'])
   },
 
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
+  formReset: function () {
+    inputs = {}
+    wx.setStorageSync('username', '')
+    wx.setStorageSync('password', '')
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
+  onLoad: function () {
+    // 调用应用实例的方法获取全局数据
+    var that = this
+    inputs['username'] = wx.getStorageSync('username')
+    inputs['password'] = wx.getStorageSync('password') // 这里没有加密安全性较低
+    this.setData({
+      inputs: inputs
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
+  switchChange: function (e) {
+    inputs[e.currentTarget.id] = e.detail.value
   },
 
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
+  tapnav: function () {
+    wx.navigateTo({
+      url: '/pages/door/door_introduce'
+    })
   }
 })

@@ -1,0 +1,21 @@
+/* pages/door/door_introduce.wxss */
+.page{
+    padding: 0 20rpx;
+}
+
+.attentionText {
+  font-family: YOUYUAN;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+}
+
+.container_ {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pic {
+  margin-top: 120rpx;
+}

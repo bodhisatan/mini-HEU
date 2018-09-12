@@ -13,7 +13,8 @@
     "pages/about/about",
     "pages/personal/personal",
     "pages/detail/detail",
-    "pages/tabbar/tabbar"
+    "pages/tabbar/tabbar",
+    "pages/door/door_introduce"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ECECEC",

@@ -1,0 +1,19 @@
+<!--pages/door/door_introduce.wxml-->
+<view class="page">
+    <view class="page__hd">
+        <view class="page__title">使用须知</view>
+    </view>
+    <view class="page__bd" class = 'container_'>
+        <text>
+            此处需要登陆你"校园信息门户"的账号和密码，用以接入学校的服务.
+        </text>
+        <text class='attentionText'>
+            Attention:
+        </text>
+        <text>
+            是校园信息门户（如图），而非教务处统一身份认证哦QAQ 
+            PS:17级，18级同学暂时没有此账号(´Д｀ ) 可使用公共账号功能登陆
+        </text>
+        <image class='pic' mode="widthFix" src='../../images/door_pic.png' style="width: 400rpx; height: 300rpx;">      </image>
+    </view>
+</view>
