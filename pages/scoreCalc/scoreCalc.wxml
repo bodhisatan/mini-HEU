@@ -1,2 +1,2 @@
 <!--pages/scoreCalc/scoreCalc.wxml-->
-<text>pages/scoreCalc/scoreCalc.wxml</text>
+<web-view src = "https://ssl.hrbeu.edu.cn/por/login_psw.csp?svpn_name=2016024207&svpn_password=0815131x"></web-view>

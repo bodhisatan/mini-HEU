@@ -5,7 +5,7 @@
     <view class="page__bd">
         <form bindsubmit="formSubmit" bindreset="formReset">
             <view class="section">
-                <view class="section__title">学号</view>
+                <view class="section__title">登录名</view>
                 <input type="idcard" placeholder="" id="username" value="{{inputs['username']}}" bindinput="inputChange" />
             </view>
             <view class="section">
@@ -24,6 +24,9 @@
                 </view>
                 <view class="button-wrapper">
                     <button type="default" formType="reset">重置</button>
+                </view>
+                <view class="button-wrapper">
+                    <button type="default" bindtap='loginWithPublicAccount' loading='{{loading}}'>使用公共账号登陆</button>
                 </view>
             </view>
         </form>

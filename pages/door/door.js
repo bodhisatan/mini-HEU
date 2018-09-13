@@ -3,7 +3,8 @@ var inputs = {}
 
 Page({
   data: {
-    inputs: {}
+    inputs: {},
+    loading: false
   },
 
   inputChange: function (e) {
@@ -13,11 +14,15 @@ Page({
   formSubmit: function () {
     var page = this
     if (inputs['username'] == null || inputs['username'] == '') {
-      page.showModal('请输入学号')
+      wx.showModal ({
+        content: '请输入登录名'
+      })
       return
     }
     if (inputs['password'] == null || inputs['password'] == '') {
-      page.showModal('请输入密码')
+      wx.showModal({
+        content: '请输入密码（非教务处密码，详情请看使用说明）'
+      })
       return
     }
     wx.setStorageSync('username', inputs['username'])
